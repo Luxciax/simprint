@@ -2,14 +2,13 @@ import { useMemo } from 'react';
 import { Navigate } from 'react-router';
 import type { RouteObject } from 'react-router';
 import { pluginRegistry } from '@slotkitjs/core';
-import { useAppState } from '../../../plugins/services/store/src';
 import type { RouteConfig } from '../types';
 
 /**
  * 构建路由配置的 Hook
  */
 export function useRouteConfig(routes: RouteConfig[]) {
-  const { isAuthenticated } = useAppState();
+  const isAuthenticated = true;
 
   return useMemo(() => {
     const appLayoutPlugin = pluginRegistry.getPlugin('app-layout');

@@ -6,5 +6,5 @@
   "author": "Simprint Team",
   "entry": "./src/index.tsx",
   "slots": [],
-  "enabled": true
+  "enabled": false
 }
