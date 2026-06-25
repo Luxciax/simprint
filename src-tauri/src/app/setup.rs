@@ -94,7 +94,7 @@ pub fn init_simprint_runtime_background(app_handle: AppHandle) {
 
         let ctx = AppContext::get();
         ctx.simprint_runtime_manager.set_app_handle(app_handle.clone()).await;
-        ctx.runtime_update_service.start_background(app_handle.clone());
+        log::info!("No-login build: runtime update background service is disabled");
 
         if let Err(error) = ctx.simprint_runtime_manager.start_background().await {
             log::warn!("failed to start simprint-runtime: {}", error);
